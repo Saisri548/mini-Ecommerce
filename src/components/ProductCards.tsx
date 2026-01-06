@@ -1,4 +1,4 @@
-import { fetchProducts } from "../API/productsApi";
+import { fetchProducts } from "../API/ProductsApi";
 
 interface Props {
   product: Product;
@@ -20,4 +20,5 @@ function ProductCards({ product }: Props) {
 }
 
 export default ProductCards;
+
 
