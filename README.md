@@ -1,73 +1,80 @@
-# React + TypeScript + Vite
+🛒 Mini E-Commerce App (React + TypeScript)
+📌 Project Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a Mini E-Commerce web application built using React and TypeScript.
+The app fetches product data from FakeStoreAPI and allows users to browse, search, and filter products by category.
 
-Currently, two official plugins are available:
+This project focuses on learning modern React development, proper TypeScript usage, and API integration.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✨ Features
 
-## React Compiler
+Fetches products from FakeStoreAPI
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Displays products in a clean card layout
 
-## Expanding the ESLint configuration
+Search products by title (case-insensitive)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Filter products by category
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Responsive UI using Tailwind CSS
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Component-based architecture
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Type-safe code using TypeScript interfaces
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+⚠️ Note: Pagination is not implemented in this version.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🛠 Tech Stack
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+React 18
+
+TypeScript
+
+Vite (Build Tool)
+
+Tailwind CSS
+
+FakeStoreAPI
+
+🏗 Project Structure
+src/
+├── API/
+│   └── productsApi.ts        # API logic & Product interface
+├── components/
+│   ├── Filters.tsx           # Search & category filters
+│   ├── ProductCards.tsx      # Single product card
+│   └── ProductList.tsx       # Filtered product list
+├── App.tsx                   # Main application component
+├── main.tsx                  # ReactDOM entry point
+
+⚙️ How to Run Locally
+
+Clone the repository
+
+git clone <your-repository-url>
+cd <project-folder>
+
+
+Install dependencies
+
+npm install
+
+
+Start the development server
+
+npm run dev
+
+
+Open in browser
+
+http://localhost:5173
+
+📝 Notes
+
+This project is built for learning purposes.
+
+Products are fetched live from FakeStoreAPI (limited dataset).
+
+Pagination, sorting, and loading states can be added in future improvements.
+
+API keys are not required for FakeStoreAPI.
